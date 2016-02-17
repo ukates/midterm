@@ -31,3 +31,8 @@ def testQ2Subtract():
 
 def testQ2Computer():
     assert( q2.determineComputerChoice() in {1,2,3,4} )
+    assert( q2.determineComputerChoice() in {1,2,3,4} )
+    assert( q2.determineComputerChoice() in {1,2,3,4} )
+    assert( q2.determineComputerChoice() in {1,2,3,4} )
+    assert( q2.determineComputerChoice() in {1,2,3,4} )
+    assert( q2.determineComputerChoice() in {1,2,3,4} )
