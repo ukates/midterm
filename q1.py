@@ -5,4 +5,11 @@
 #   Example 4: if your balance is 8, then your program should return 8. 
 
 def computeMinimumPayment( balance ):
-    #TODO write code inside this function that achieves the functionality described above
+    if balance <= 10:
+        return balance #if balance is less than or equal to 10 the original balance will display because it is less than the minimum payment 
+    elif balance * (.021) > 10: #if 2.1 percent of the balance is more than 10 dollars it will return this amount. 
+        return balance * (.021)
+    elif balance * (.021) < 10: #if 2.1 percent of the balance is less than 10 dollars, 10 dollars will display because it would be the minimum payment. 
+        return 10
+
+        #TODO write code inside this function that achieves the functionality described above

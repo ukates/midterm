@@ -22,19 +22,27 @@ def playGame():
         
 
 def askUserChoice():
-    # TODO: write code in this functiont that:
-    # 1. Asks the user to enter their input (between 1 and 4)
-    # 2. Checks that the user's input is valid. If it's not valid (if it's not between 1 and 4), then ask the user to re-enter their input.
-    # 3. Once the user enters a valid input, return that input as an integer.
-
+    while True:
+        print('How many sticks do you want to pick up? ( 1 - 4 )')
+        userChoice = int(input()) #converts userchoice into integer
+        if userChoice in range(1,5): #if the users choice or input is 1-4 the users choice will return.  
+            return userChoice
+        else: #if userchoice is not within the correct range, it will be invalid and loop back to the start until the correct choice is given. 
+            print('Your answer is invalid, please choose an integer between 1-4 and try again!')
+    
+    
 
 def subtractSticks( number ):
-    global sticks 
+    global sticks
+    sticks -= number # this subtracts the number paramater (user choice and computer choice ) from the global value sticks, and updates the global value. 
     
-    # TODO: write code inside this function that:
-    # 1. subtracts the parameter `number` from the global variable `sticks`
-    # 2. checks if the number subtracted resulted in the last stick, if so, return True
-    # 3. if there are still sticks left, return False
+    if sticks <= 0: # if sticks is less than or equal to 0 the function will return true causing either the user or computer to lose. 
+        return True
+    else:
+        return False #if greater than 0 function will return false continuing the game until it has ended. 
+    
     
 def determineComputerChoice():
-    # TODO: write code inside this function that returns an integer between 1 and 4, random chosen by the computer
+    r = random.randint(1,4) 
+    return r #returns random integer between 1 and 4 as computers choice. 
+   
